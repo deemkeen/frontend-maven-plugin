@@ -140,7 +140,7 @@ public class BunInstaller {
             } else {
                 File destinationDirectory = getInstallDirectory();
 
-                File destination = new File(destinationDirectory, "bun");
+                File destination = new File(destinationDirectory, binaryFile);
                 this.logger.info("Copying bun binary from {} to {}", bunBinary, destination);
                 if (destination.exists() && !destination.delete()) {
                     throw new InstallationException("Could not install Bun: Was not allowed to delete " + destination);
